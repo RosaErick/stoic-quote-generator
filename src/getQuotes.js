@@ -14,8 +14,8 @@ const getQuote = async () => {
   return (<>
     
     
-    <p> " {quoteObject.body} "</p><br></br>
-    <p> -{quoteObject.author}</p>
+    <p id="text"> " {quoteObject.body} "</p><br></br>
+    <p id="author"> -{quoteObject.author}</p>
     
     </>);
 };

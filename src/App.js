@@ -48,12 +48,12 @@ const App = () => {
   };
 
   return (
-    <Content>
+    <Content id="quote-box">
       <h1>STOIC QUOTES</h1>
           <Quote> {quote ? quote : <Loader />}</Quote>
           
           <Wrapper>
-      <QuotesButton onUpdate={asyncCall} />
+      <QuotesButton  id="new-quote" onUpdate={asyncCall} />
       <TweetLink
         id="tweet-quote"
         title="Tweet this quote!"
