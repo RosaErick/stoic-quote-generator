@@ -1,37 +1,21 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import { Button } from "./Button";
 
+const Quotes = ({ quote, onUpdate }) => {
+  return (
+    <>
+      <Quote>{quote}</Quote>
 
-
-const Quotes = ({ quote,  onUpdate }) => {
-    
-    return (
-    
-        <>
-            
-            <Quote>{quote}</Quote>
-
-
-    <input  type="button" onClick={onUpdate}> bring me knowledge...</input>
-
-
-
-</>
-
-
-
-
-)
-
-
-
-
-}
-
+      <Button onClick={onUpdate}> bring me knowledge...</Button>
+    </>
+  );
+};
 
 const Quote = styled.div`
-display:flex;
-
-`
+  display: flex;
+    margin: auto 0;
+  justify-content:center;
+`;
 
 export { Quotes };

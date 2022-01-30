@@ -8,11 +8,8 @@ const getQuote = async () => {
 
 
   const getQuote = quoteData.data;
-
   const index = Math.floor(Math.random() * getQuote.length) - 1;
-
   const quoteObject = getQuote[index];
-
   const showQuote = `${quoteObject.body} - ${quoteObject.author}`;
 
   console.log(showQuote);

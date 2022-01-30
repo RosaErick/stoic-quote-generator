@@ -1,44 +1,33 @@
-import React from 'react';
-import { useState } from 'react';
-import styled from 'styled-components';
-import { getQuote }  from './quoteBlock';
-import { Quotes } from './Quote';
-
+import { useState } from "react";
+import styled from "styled-components";
+import { getQuote } from "./quoteBlock";
+import { Quotes } from "./Quote";
 
 const Content = styled.div`
-display: flex;
-margin:0 auto;
-justify-content: center;
-
-`
-
+  display: flex;
+  margin: auto;
+  width: 50%;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+`;
 
 const App = () => {
-    const [quotex, setQuoteState] = useState('');
+  const [quote, setQuote] = useState("");
 
+  const asyncCall = async () => {
+    const quote = await getQuote();
 
-    const asyncCall = async () => {
-        const quotex = await getQuote();
-
-
-        setQuoteState(quotex);
-
-
-
-
-    }
-
+    setQuote(quote);
+  };
 
     return (
         <Content>
-
-            <div> {quotex}</div>
-            <Quotes onUpdate={asyncCall} />
-
-
-
-        </Content>
-    );
+        <h1>STOIC QUOTES</h1>
+      <div> {quote}</div>
+      <Quotes onUpdate={asyncCall} />
+    </Content>
+  );
 };
 
 export { App };
