@@ -2,6 +2,8 @@
 
  This project was create for the Free Code Camp Curriculum, it was built with React and styled-components.
  Feel free to use, modify and share as you like.
+ 
+ Click [here](https://randomstoicquote.netlify.app/) to view the project.
 
 ## How to use
 
