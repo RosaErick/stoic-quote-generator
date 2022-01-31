@@ -17,8 +17,8 @@ const Container = styled.div`
   margin-top: 1.5rem;
 `;
 const QuotesBlock = styled.blockquote`
-  margin: 0;
-  min-height: 15.625rem;
+  margin-top: 1.5rem;
+  min-height: 9.625rem;
 `;
 const TweetLink = styled.a`
   text-decoration: none;
@@ -89,7 +89,7 @@ class Quotes extends Component {
   async fetchQuote() {
     try {
       const response = await fetch(API_URL);
-      const data = await response.json();
+      const data = await response.json(); 
       const getQuote = data.data;
       const index = Math.floor(Math.random() * getQuote.length) - 1;
       const quoteObject = getQuote[index];

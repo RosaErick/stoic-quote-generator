@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import Quotes from "./components/getQuotes";
+import Seneca from "./imgs/Seneca.png"
 
 const Container = styled.div`
   color: #656565;
@@ -26,6 +27,19 @@ const GitHubAnimation = keyframes`
     transform: rotate(10deg);
   }
 `;
+
+const SenecaImg = styled.img`
+margin-bottom:10px;
+height:10em;
+
+`
+const Wrapper = styled.div`
+display: flex;
+justify-content: center;
+
+
+
+`
 
 const GitHubIcon = styled.svg`
   fill: #a30b37;
@@ -54,12 +68,14 @@ const GitHubLink = styled.a`
 `;
 
 const Title = styled.h1`
-  font-family: "monospace", sans-serif;
+font-family: 'Oswald', sans-serif;
   font-size: 3.0em;
-  line-height: 1.1;
-  margin-bottom: 3.375rem;
+  line-height: 1.4;
+  letter-spacing:5px;
+  margin-bottom: 1.375rem;
   margin-top: 3.375rem;
   text-align: center;
+  color: #a30b37;
 `;
 
 function App() {
@@ -77,8 +93,12 @@ function App() {
             fill="#f9f9f9"
           />
         </GitHubIcon>
-      </GitHubLink>
-      <Title>Random Stoic Quote</Title>
+          </GitHubLink>
+    
+          <Title><i>Random Stoic Quote</i></Title>
+          <Wrapper>
+              <SenecaImg src={Seneca} />
+              </Wrapper>
       <Quotes />
     </Container>
   );
